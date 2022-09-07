@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h4 style="color: red;">restaurantList</h4>
+
+    <p id="abc"></p>
+
+    <script>
+        let users = [
+            { id: 1, restaurantname: "Vishwanath Hotel", address: "Bhosari", city: "Pune" },
+            { id: 2, restaurantname: "Hotel Taj", address: "Kalyani nagar", city: "mumbai" },
+            { id: 3, restaurantname: "Kamlesh Hotel", address: "Dehu road", city: "Bengaluru" },
+            { id: 4, restaurantname: "KGF Hotel", address: "Pushpak chowk", city: "Bengaluru" },
+            { id: 5, restaurantname: "Annapurna restro", address: "Jay Nagar", city: "Pune" },
+        ];
+
+
+        // -------------------------------------------------
+        
+        // restaurantList
+
+        let userFullnames1 = users.map(function (element1) {
+            return " Name:- " + `${element1.restaurantname} ` + "  Address :- " + `${element1.address} ` + " city:- " + `${element1.city} `;
+        });
+
+        console.log(userFullnames1);
+        document.write(userFullnames1);
+
+// --------------------------------------------------
+
+        //filterRestaurantByCity
+
+ //       document.getElementById("abc").innerHTML = users.filter(check);
+
+ let filterrestaurantbycity1 = users.filter(function(check) {
+        return check.city == "Bengaluru"; });
+
+        console.log(filterrestaurantbycity1);
+
+        document.write(filterrestaurantbycity1);
+
+        document.getElementById("abc").innerHTML=filterrestaurantbycity1;
+    
+
+        // ----------------------------------------------
+
+        // printAllRestaurantNames"
+
+let printAllRestaurantNames1 = users.map(function (element2) {
+    return " RestaurantNames:- " + `${element2.restaurantname} `;
+});
+
+console.log(printAllRestaurantNames1);
+
+
+</script>
+
+</body>
+
+</html>
